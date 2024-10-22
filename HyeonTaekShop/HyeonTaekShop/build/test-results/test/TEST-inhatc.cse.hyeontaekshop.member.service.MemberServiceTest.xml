@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="inhatc.cse.hyeontaekshop.member.service.MemberServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-22T05:22:31" hostname="4-406-20" time="0.556">
+  <properties/>
+  <testcase name="사용자 등록 테스트" classname="inhatc.cse.hyeontaekshop.member.service.MemberServiceTest" time="0.556"/>
+  <system-out><![CDATA[14:22:26.404 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [inhatc.cse.hyeontaekshop.member.service.MemberServiceTest]: MemberServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:22:26.501 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration inhatc.cse.hyeontaekshop.HyeonTaekShopApplication for test class inhatc.cse.hyeontaekshop.member.service.MemberServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-10-22T14:22:26.865+09:00  INFO 5576 --- [    Test worker] i.c.h.member.service.MemberServiceTest   : Starting MemberServiceTest using Java 21.0.2 with PID 5576 (started by PC in D:\Spring_WS\C_Ban\HyeonTaekShop)
+2024-10-22T14:22:26.868+09:00  INFO 5576 --- [    Test worker] i.c.h.member.service.MemberServiceTest   : No active profile set, falling back to 1 default profile: "default"
+2024-10-22T14:22:27.651+09:00  INFO 5576 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-22T14:22:27.699+09:00  INFO 5576 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2024-10-22T14:22:28.123+09:00  INFO 5576 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-22T14:22:28.189+09:00  INFO 5576 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-22T14:22:28.222+09:00  INFO 5576 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-22T14:22:28.528+09:00  INFO 5576 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-22T14:22:28.556+09:00  INFO 5576 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-22T14:22:28.869+09:00  INFO 5576 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3164d5aa
+2024-10-22T14:22:28.871+09:00  INFO 5576 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-22T14:22:28.913+09:00  WARN 5576 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-22T14:22:28.915+09:00  WARN 5576 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@55b45ea1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@d5a72cd)
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@45f95ac0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3b77940f)
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4c418496) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@12d35bc9)
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1df32c09) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1aa31454)
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5a8656a2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@52035328)
+2024-10-22T14:22:28.939+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5614ae05) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@54970127)
+2024-10-22T14:22:28.940+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3c4c7e51) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@749ee0e3)
+2024-10-22T14:22:28.940+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7891cf3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6bfbab1c)
+2024-10-22T14:22:28.941+09:00 DEBUG 5576 --- [    Test worker] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@349aeec4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3700994c)
+2024-10-22T14:22:29.585+09:00  INFO 5576 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists item
+Hibernate: 
+    drop table if exists member
+Hibernate: 
+    create table item (
+        price integer not null,
+        stock integer,
+        item_id bigint not null auto_increment,
+        item_nm varchar(50) not null,
+        item_detail tinytext not null,
+        primary key (item_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table member (
+        member_id bigint not null auto_increment,
+        name varchar(20) not null,
+        email varchar(50),
+        address varchar(200),
+        password varchar(200) not null,
+        role enum ('ADMIN','USER'),
+        primary key (member_id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table member 
+       add constraint UKmbmcqelty0fbrvxp1q58dn57t unique (email)
+2024-10-22T14:22:29.863+09:00  INFO 5576 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-22T14:22:30.160+09:00  WARN 5576 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-22T14:22:30.194+09:00  INFO 5576 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-10-22T14:22:30.257+09:00  INFO 5576 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-10-22T14:22:30.731+09:00  INFO 5576 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-22T14:22:31.125+09:00  INFO 5576 --- [    Test worker] i.c.h.member.service.MemberServiceTest   : Started MemberServiceTest in 4.496 seconds (process running for 5.52)
+Member(id=null, name=홍길동, email=hong4@test.com, password=$2a$10$suniykdklOQVGdciTng9YOP5x.vt67/IVZVP.8vu05tA3OniTKUNm, address=인천 미추홀구, role=USER)
+Hibernate: 
+    select
+        m1_0.member_id,
+        m1_0.address,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password,
+        m1_0.role 
+    from
+        member m1_0 
+    where
+        m1_0.email=?
+Hibernate: 
+    insert 
+    into
+        member
+        (address, email, name, password, role) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\PC\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
